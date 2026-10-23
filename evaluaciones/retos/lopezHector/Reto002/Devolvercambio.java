@@ -10,9 +10,11 @@ public class Devolvercambio {
         final int BILLETE_DE_5 = 5;
         final int MONEDA_DE_1 = 1;
         final int MONEDA_DE_2 = 2;
-       
-        
-        
+        System.out.print("Cuantos euros debe pagar: ");
+        int precioProducto = scanner.nextInt();
+        System.out.print("Cuantos euros entrega el cliente: ");
+        int pagoCliente = scanner.nextInt();
+
       
     }
 }
