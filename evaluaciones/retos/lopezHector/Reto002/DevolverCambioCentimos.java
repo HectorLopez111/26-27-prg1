@@ -1,5 +1,6 @@
 
 import java.util.Scanner;
+
 public class DevolverCambioCentimos {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -22,31 +23,31 @@ public class DevolverCambioCentimos {
         double pagoCliente = scanner.nextDouble();
         double cambio = pagoCliente - precioProducto;
 
-        double cantidad_billetes100 = cambio / BILLETE_DE_100;
+        int cantidad_billetes100 = (int) (cambio / BILLETE_DE_100);
         cambio %= BILLETE_DE_100;
-        double cantidad_billetes50 = cambio / BILLETE_DE_50;
+        int cantidad_billetes50 = (int) (cambio / BILLETE_DE_50);
         cambio %= BILLETE_DE_50;
-        double cantidad_billetes20 = cambio / BILLETE_DE_20;
+        int cantidad_billetes20 = (int) (cambio / BILLETE_DE_20);
         cambio %= BILLETE_DE_20;
-        double cantidad_billetes10 = cambio / BILLETE_DE_10;
+        int cantidad_billetes10 = (int) (cambio / BILLETE_DE_10);
         cambio %= BILLETE_DE_10;
-        double cantidad_billetes5 = cambio / BILLETE_DE_5;
+        int cantidad_billetes5 = (int) (cambio / BILLETE_DE_5);
         cambio %= BILLETE_DE_5;
-        double cantidad_monedas2 = cambio / MONEDA_DE_2;
+        int cantidad_monedas2 = (int) (cambio / MONEDA_DE_2);
         cambio %= MONEDA_DE_2;
-        double cantidad_monedas1 = cambio / MONEDA_DE_1;
+        int cantidad_monedas1 = (int) (cambio / MONEDA_DE_1);
         cambio %= MONEDA_DE_1;
-        double cantidad_monedas50Centimos = cambio / MONEDA_DE_50_CENTIMOS;
+        int cantidad_monedas50Centimos = (int) (cambio / MONEDA_DE_50_CENTIMOS);
         cambio %= MONEDA_DE_50_CENTIMOS;
-        double cantidad_monedas20Centimos = cambio / MONEDA_DE_20_CENTIMOS;
+        int cantidad_monedas20Centimos = (int) (cambio / MONEDA_DE_20_CENTIMOS);
         cambio %= MONEDA_DE_20_CENTIMOS;
-        double cantidad_monedas10Centimos = cambio / MONEDA_DE_10_CENTIMOS;
+        int cantidad_monedas10Centimos = (int) (cambio / MONEDA_DE_10_CENTIMOS);
         cambio %= MONEDA_DE_10_CENTIMOS;
-        double cantidad_monedas5Centimos = cambio / MONEDA_DE_5_CENTIMOS;
+        int cantidad_monedas5Centimos = (int) (cambio / MONEDA_DE_5_CENTIMOS);
         cambio %= MONEDA_DE_5_CENTIMOS;
-        double cantidad_monedas2Centimos = cambio / MONEDA_DE_2_CENTIMOS;
+        int cantidad_monedas2Centimos = (int) (cambio / MONEDA_DE_2_CENTIMOS);
         cambio %= MONEDA_DE_2_CENTIMOS;
-        double cantidad_monedas1Centimo = cambio / MONEDA_DE_1_CENTIMOS;
+        int cantidad_monedas1Centimo = (int) (cambio / MONEDA_DE_1_CENTIMOS);
         cambio %= MONEDA_DE_1_CENTIMOS;
 
         String desglose = cantidad_billetes100 + " billete(s) de 100 €\n"
@@ -68,5 +69,3 @@ public class DevolverCambioCentimos {
     }
 
 }
-
-
