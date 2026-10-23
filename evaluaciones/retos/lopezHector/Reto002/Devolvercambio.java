@@ -14,24 +14,31 @@ public class Devolvercambio {
         int precioProducto = scanner.nextInt();
         System.out.print("Cuantos euros entrega el cliente: ");
         int pagoCliente = scanner.nextInt();
-        String validacionpago = (pagoCliente >= precioProducto) ? "Acción permitida" : "Error pago insuficiente";
-        System.out.println(validacionpago);
         int cambio = pagoCliente - precioProducto;
-        System.out.println(cambio / BILLETE_DE_100 + " billete(s) de 100 €");
-        cambio %= BILLETE_DE_100;
-        System.out.println(cambio / BILLETE_DE_50 + " billete(s) de 50 €");
-        cambio %= BILLETE_DE_50;
-        System.out.println(cambio / BILLETE_DE_20 + " billete(s) de 20 €");
-        cambio %= BILLETE_DE_20;
-        System.out.println(cambio / BILLETE_DE_10 + " billete(s) de 10 €");
-        cambio %= BILLETE_DE_10;
-        System.out.println(cambio / BILLETE_DE_5 + " billete(s) de 5 €");
-        cambio %= BILLETE_DE_5;
-        System.out.println(cambio / MONEDA_DE_2 + " moneda(s) de 2 €");
-        cambio %= MONEDA_DE_2;
-        System.out.println(cambio / MONEDA_DE_1 + " moneda(s) de 1 €");
-        cambio %= MONEDA_DE_1;
 
+        int cantidad_billetes100 = cambio / BILLETE_DE_100;
+        cambio %= BILLETE_DE_100;
+        int cantidad_billetes50 = cambio / BILLETE_DE_50;
+        cambio %= BILLETE_DE_50;
+        int cantidad_billetes20 = cambio / BILLETE_DE_20;
+        cambio %= BILLETE_DE_20;
+        int cantidad_billetes10 = cambio / BILLETE_DE_10;
+        cambio %= BILLETE_DE_10;
+        int cantidad_billetes5 = cambio / BILLETE_DE_5;
+        cambio %= BILLETE_DE_5;
+        int cantidad_monedas2 = cambio / MONEDA_DE_2;
+        cambio %= MONEDA_DE_2;
+        int cantidad_monedas1 = cambio / MONEDA_DE_1;
+
+        String desglose = cantidad_billetes100 + " billete(s) de 100 €\n"
+                + cantidad_billetes50 + " billete(s) de 50 €\n"
+                + cantidad_billetes20 + " billete(s) de 20 €\n"
+                + cantidad_billetes10 + " billete(s) de 10 €\n"
+                + cantidad_billetes5 + " billete(s) de 5 €\n"
+                + cantidad_monedas2 + " moneda(s) de 2 €\n"
+                + cantidad_monedas1 + " moneda(s) de 1 €";
+
+        System.out.println(pagoCliente >= precioProducto ? desglose : "Error pago insuficiente");
     }
 
 }
